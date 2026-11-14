@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juros Compostos</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    
+
+    <div id="calc">
+        <h1>CALCULADORA</h1>
+        <form>
+            <div id="campos">
+                <div id="lado1">
+                    <div id="valIn">
+                        <p>Valor Inicial:
+                            <br>
+                            <label for="valorInicio">
+                                <input type="number" id="valorInicio">
+                            </label>
+                        </p>
+                    </div>
+                    <div id="apoMen">
+                        <p>Aporte Mensal:
+                            <br>
+                            <label for="aporteMensal">
+                                <input type="number" id="aporteMensal">
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div id="lado2">
+                    <div id="taxJur">
+                        <p>Taxa De Juros (MENSAL):
+                            <br>
+                            <label for="taxaJuros">
+                                <input type="number" id="taxaJuros" step="any">
+                            </label>
+                        </p>
+                    </div>
+                    <div id="temp">
+                        <p>Tempo:
+                            <br>
+                            <label for="tempo">
+                                <input type="number" id="tempo">
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="CALCULAR" id="botao">
+        </form>
+        
+        
+        <div id="resultado">
+            <h2></h2>
+        </div>
+    </div>
+
+ 
+
+    <script>
+
+        const frm = document.querySelector("form")
+        const divResultado = document.querySelector("h2")
+
+        frm.addEventListener("submit", (e) =>{
+            e.preventDefault();
+
+            const valorInicial = Number(document.getElementById("valorInicio").value)
+            const aporteM = Number(document.getElementById("aporteMensal").value)
+            const taxaJuros = Number(document.getElementById("taxaJuros").value)
+            const tempo = Number(document.getElementById("tempo").value) * 12 // AQUI A BASE DE CALCULO É EM MESES
+
+            const baseCalcJuros = taxaJuros/100; // A TAXA DE JUROS TAMBÉM É MENSAL
+
+            const valFinal = aporteM * ((1 + baseCalcJuros)**tempo - 1) / baseCalcJuros
+
+    
+            divResultado.innerText = valFinal.toLocaleString("pt-br", {style:"currency", currency: "BRL"})
+        })
+
+    </script>
+</body>
+</html>
