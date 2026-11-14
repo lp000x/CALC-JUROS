@@ -9,6 +9,10 @@ body{
     height: 100vh;
 }
 
+form{
+    margin-top: 15px;
+}
+
 #calc{
     display: flex;
     align-items: center;
@@ -71,6 +75,29 @@ body{
 }
 
 @media (max-width: 720px) {
+
+    h1{
+        font-size: 2em;
+        text-align: center;
+    }
+
+    form{
+        margin-top: 15px;
+    }
+    p{
+        font-size: 1.5em;
+    }
+
+    input{
+        height: 34px;
+        width: 200px;
+    }
+
+    #botao{
+        font-size: 1.5em;
+        width: 120px;
+    }
+
     #campos{
         display: flex;
         flex-direction: column;
@@ -78,6 +105,14 @@ body{
         border-radius: 15px;
         box-shadow: 1px 13px 13px rgba(0, 0, 0, 0.322);
         padding: 20px;
+    }
+
+    #lado2{
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    #lado1{
+       margin: 0px;
     }
 }
 
