@@ -61,11 +61,24 @@ body{
     border-radius: 15px;
     box-shadow: 1px 13px 13px rgba(0, 0, 0, 0.322);
     padding: 20px;
+    min-width: 320px;
 }
 
 #botao{
     display: flex;
     flex-direction: column;
+    min-width: 320px;
+}
+
+@media (max-width: 720px) {
+    #campos{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 1px 13px 13px rgba(0, 0, 0, 0.322);
+        padding: 20px;
+    }
 }
 
 
