@@ -97,7 +97,7 @@
             const taxaAnual = Number(document.getElementById("inserirTaxaAnual").value) / 100
             const res = document.getElementById("resultadoTaxa")
 
-            const taxa = (1 + taxaAnual)**0.08333 - 1
+            const taxa = ((1 + taxaAnual)**0.08333 - 1) * 100
             
             res.innerText = `Sua Taxa Mensal É: ${taxa.toFixed(4)}`
 
