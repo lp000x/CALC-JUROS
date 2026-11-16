@@ -134,6 +134,7 @@ form{
     #botao{
         font-size: 1.5em;
         width: 120px;
+        margin: 0 auto;
     }
 
     #campos{
@@ -161,7 +162,7 @@ form{
     display: flex;
     flex-direction: column;
     width: 430px;
-    height: 180px;
+    height: 210px;
     margin-top: 12px;
     margin-bottom: 12px;
 }
