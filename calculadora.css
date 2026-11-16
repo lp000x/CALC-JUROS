@@ -29,6 +29,38 @@ form{
     padding: 20px;
 }
 
+#descTaxaJur{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 13px 13px rgba(0, 0, 0, 0.322);
+    padding: 20px;
+
+    width: 430px;
+    height: 150px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#inserirTaxaAnual{
+    margin: 10px 0px
+}
+
+#resultadoTaxa{
+    margin-top: 7px;
+}
+
+#btDescTaxa{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+    border-style: hidden;
+}
+
+#btDescTaxa:hover{
+    cursor: pointer;
+}
+
 #botao{
     width: 430px;
     height: 40px;
@@ -36,6 +68,11 @@ form{
     color: white;
     margin-top: 20px;
     border-radius: 15px;
+    border-style: hidden;
+}
+
+#botao:hover{
+    cursor: pointer;
 }
 
 #lado1{
